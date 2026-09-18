@@ -1,0 +1,13 @@
+{
+  "person_name": "Grandma",
+  "caregiver_name": "Sam",
+  "chair_name": "Recliner",
+  "notify_action": "notify.mobile_app_sams_phone",
+  "window_start": "09:00",
+  "window_end": "22:00",
+  "long_sit_hours": "4",
+  "snooze_minutes": "15",
+  "delayed_on": "10",
+  "delayed_off": "90",
+  "webhook_url": ""
+}

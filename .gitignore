@@ -1,0 +1,11 @@
+# Generated per-install files, including secrets
+output/
+secrets.yaml
+
+# ESPHome build cache
+.esphome/
+
+# OS and editor clutter
+.DS_Store
+__pycache__/
+*.gcode
