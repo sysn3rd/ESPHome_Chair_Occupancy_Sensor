@@ -4,11 +4,11 @@
 #
 # Board: Seeed Studio XIAO ESP32S3 with its FPC antenna attached.
 #
-# Pad wiring (see docs/wiring.md). The pad is two loops, and the switch is
+# Pad wiring (see docs/wiring.svg). The pad is two loops, and the switch is
 # between them:
 #   switch wire  -> 1k resistor -> D3 (GPIO4)   pulled LOW when someone sits
 #   return wire  -> GND                         other loop, one end
-#   check wire   -> D4 (GPIO5)                  other loop, other end: LOW
+#   check wire   -> 1k resistor -> D4 (GPIO5)   other loop, other end: LOW
 #                                               while the cable is intact
 #   fourth wire  -> unused, insulated
 #

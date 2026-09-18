@@ -16,7 +16,7 @@ Follow [identify-your-pad.md](identify-your-pad.md). You need to know three wire
 | --- | --- | --- |
 | Switch wire (one end of layer A) | red | D3, through the 1 kΩ resistor |
 | Return wire (one end of layer B) | green | GND |
-| Check wire (other end of layer B) | yellow | D4 |
+| Check wire (other end of layer B) | yellow | D4, through a second 1 kΩ resistor |
 | Unused (other end of layer A) | black | none, insulate |
 
 ## 3. Generate your configuration
@@ -37,7 +37,7 @@ If the board does not join WiFi, check the antenna first. See [troubleshooting.m
 
 ## 5. Test the pad on a breadboard
 
-Before soldering, wire the pad to the board through the breadboard: switch wire to D3 through the resistor, return wire to GND, check wire to D4. Then, watching Home Assistant:
+Before soldering, wire the pad to the board through the breadboard: switch wire to D3 and check wire to D4, each through a resistor, and return wire to GND. Then, watching Home Assistant:
 
 1. Pad empty: `Pad Raw` off, `Pad Cable` OK.
 2. Press the pad: `Pad Raw` on, `Occupied` on after the delay.
@@ -51,7 +51,7 @@ If any step fails, stop and see [troubleshooting.md](troubleshooting.md). Everyt
 Unplug the USB cable first.
 
 1. **Board wires.** Solder three short hookup wires to the XIAO: one to D3, one to D4, one to GND. D3 and D4 sit next to each other on one edge; GND is on the opposite edge, second from the USB-C end. Confirm against the labels printed on your board. Tin the pad and the wire first, then join them with a 2 to 3 second touch. Lingering lifts pads.
-2. **Resistor.** Splice the 1 kΩ resistor into the D3 wire, heat shrink over both joints and the resistor body.
+2. **Resistors.** Splice a 1 kΩ resistor into the D3 wire and another into the D4 wire, with heat shrink over each joint and each resistor body.
 3. **Splices to the pad.** Slide heat shrink on first, then splice each pad wire to its board wire. Keep the joints staggered so they cannot touch each other, and shrink the tubing over each.
 4. **Unused wire.** Trim it and cover the end with heat shrink so it cannot touch anything.
 5. Plug in and repeat the four breadboard checks from step 5.

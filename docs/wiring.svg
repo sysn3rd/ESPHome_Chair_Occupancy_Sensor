@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 470" width="850" height="470" role="img" aria-labelledby="t d" font-family="Helvetica, Arial, sans-serif">
   <title id="t">Wiring diagram: chair pad to XIAO ESP32S3</title>
-  <desc id="d">The chair pad contains two conductors, each looped out and back on two wires. Red and black are the two ends of conductor A; green and yellow are the two ends of conductor B. A pressure switch between the conductors closes under weight. Red connects through a 1 kilohm resistor to pin D3. Green connects to GND. Yellow connects to pin D4 as a cable check. Black is unused and insulated. The board is powered by USB-C and needs its FPC antenna attached.</desc>
+  <desc id="d">The chair pad contains two conductors, each looped out and back on two wires. Red and black are the two ends of conductor A; green and yellow are the two ends of conductor B. A pressure switch between the conductors closes under weight. Red connects through a 1 kilohm resistor to pin D3. Green connects to GND. Yellow connects through a second 1 kilohm resistor to pin D4 as a cable check. Black is unused and insulated. The board is powered by USB-C and needs its FPC antenna attached.</desc>
 
   <rect width="850" height="470" fill="#ffffff"/>
   <text x="425" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#111">Wiring: chair pad to XIAO ESP32S3 (schematic)</text>
@@ -45,9 +45,11 @@
   <path d="M280 240 H560" fill="none" stroke="#2e7d32" stroke-width="4"/>
   <text x="300" y="232" font-size="13" font-weight="bold" fill="#1b5e20">green</text>
 
-  <!-- Yellow: pad -> D4 -->
-  <path d="M280 310 H560" fill="none" stroke="#222" stroke-width="7"/>
-  <path d="M280 310 H560" fill="none" stroke="#fbc02d" stroke-width="4"/>
+  <!-- Yellow: pad -> 1k -> D4 -->
+  <path d="M280 310 H400 M460 310 H560" fill="none" stroke="#222" stroke-width="7"/>
+  <path d="M280 310 H400 M460 310 H560" fill="none" stroke="#fbc02d" stroke-width="4"/>
+  <rect x="400" y="300" width="60" height="20" fill="#fff" stroke="#111" stroke-width="2"/>
+  <text x="430" y="293" text-anchor="middle" font-size="13" font-weight="bold" fill="#111">1 kΩ</text>
   <text x="300" y="302" font-size="13" font-weight="bold" fill="#111">yellow</text>
 
   <!-- Board -->

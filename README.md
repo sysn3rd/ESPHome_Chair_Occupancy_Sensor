@@ -26,7 +26,7 @@ It was built for an elderly family member who uses a lift recliner and a walker 
 
 ## What you need
 
-A Seeed XIAO ESP32S3 with its antenna, a chair sensor pad, a 1 kΩ resistor, a USB power adapter, a 3D printed case, basic soldering tools, and Home Assistant with the companion app. Full list: [docs/bom.md](docs/bom.md).
+A Seeed XIAO ESP32S3 with its antenna, a chair sensor pad, two 1 kΩ resistors, a USB power adapter, a 3D printed case, basic soldering tools, and Home Assistant with the companion app. Full list: [docs/bom.md](docs/bom.md).
 
 ## Quick start
 

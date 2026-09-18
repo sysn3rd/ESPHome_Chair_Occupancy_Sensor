@@ -339,9 +339,12 @@ module board_wiring() {
     color("Red") wire([[14, 2.5, 7], [d3_pad[0], 2.5, 7], d3_pad + [0, -1.5, 2], d3_pad]);
     color("Tan") translate([15, 2.5, 7]) rotate([0, 90, 0]) cylinder(d = 2.4, h = 6);        // 1k resistor
     color("DarkRed", 0.6) translate([13.5, 2.5, 7]) rotate([0, 90, 0]) cylinder(d = 3, h = 9); // heat shrink
-    // Pad yellow: cable check to D4, next to D3 on the same edge
+    // Pad yellow: cable check to D4, next to D3 on the same edge, through a second 1k resistor
     color("Gold") wire([[out, cable_y + 2.6, 2.2], [out + 5, cable_y + 2.6, 6.5], [out + 7, 22, 9.5],
-                        [29, 9, 9.5], [d4_pad[0] + 2, 5.5, 9.5], d4_pad + [0, -1.5, 2.5], d4_pad]);
+                        [29, 9, 9.5], [26, 5.5, 9.5]]);
+    color("Gold") wire([[17, 5.5, 9.5], [d4_pad[0] + 2, 5.5, 9.5], d4_pad + [0, -1.5, 2.5], d4_pad]);
+    color("Tan") translate([18.5, 5.5, 9.5]) rotate([0, 90, 0]) cylinder(d = 2.4, h = 6);     // 1k resistor
+    color("Goldenrod", 0.6) translate([17, 5.5, 9.5]) rotate([0, 90, 0]) cylinder(d = 3, h = 9); // heat shrink
 }
 
 module screws() {
@@ -370,7 +373,7 @@ module layout() {
     label("D3", [d3_pad[0] - 1.5, low_edge - 4, lz], 2);
     label("D4", [d4_pad[0] + 2, low_edge - 4, lz], 2);
     label("GND", [gnd_pad[0], high_edge + 2, lz], 2);
-    label("1k", [18, -3, lz], 2);
+    label("1k x2", [19, -3, lz], 2);
     label("USB-C", [-wall - 14, pcb_y + 9, lz]);
     label("PAD CABLE", [-wall - 16, cable_y + 8, lz]);
     label("TIE ANCHOR", [anchor_x + anchor_len / 2, cable_y + 9, lz], 1.8);

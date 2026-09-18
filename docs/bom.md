@@ -8,11 +8,11 @@ Quantities are for one chair. Nothing here is exotic; the only part that varies 
 | --- | --- | --- |
 | Seeed Studio XIAO ESP32S3 | 1 | The plain version, not the Sense. It ships with the U.FL FPC antenna, which is **required**: without it the board sees the network at about -90 dBm and cannot connect. Consider buying 2; the castellated pads lift if reworked too often. |
 | Chair sensor pad, corded, 10 x 15 in | 1 | **Tested:** Replacement 10in x 15in Chair Sensor Pad by Smart Caregiver, UPC 812293010372 ([Amazon B01N0P2J6X](https://www.amazon.com/dp/B01N0P2J6X)). A replacement pad for their TL-2100 series monitors, with a 4-wire modular plug. Other brands usually work, but wire colors and layout vary: see [identify-your-pad.md](identify-your-pad.md). |
-| 1 kΩ resistor, 1/4 W | 1 to 2 | One on the switch wire (D3) for static protection. A second on the check wire (D4) is optional. |
+| 1 kΩ resistor, 1/4 W | 2 | One on the switch wire (D3) and one on the check wire (D4), protecting the pins from static on the long pad cable. |
 | USB-C cable | 1 | Must carry data for the first flash. After that any cable works. |
 | 5 V USB power adapter, 1 A or more | 1 | Wall power only. WiFi drains a battery in under a day. |
 | Stranded hookup wire, 24 to 26 AWG | about 30 cm each of 3 colors | Match the pad colors if you can; it makes checking easier. |
-| Heat shrink tubing | assorted, 2 to 5 mm | For every splice and over the resistor. |
+| Heat shrink tubing | assorted, 2 to 5 mm | For every splice and over both resistors. |
 
 ## Enclosure and mounting
 

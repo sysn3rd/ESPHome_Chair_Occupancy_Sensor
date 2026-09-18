@@ -29,7 +29,7 @@ Now measure every pair (four wires make six pairs), first with the pad empty, th
 
 ## Reading the results
 
-- **Two pairs at 0 Ω empty, cross pairs open empty and low when pressed:** the looped pad above. Wire one end of layer A to D3 (through the resistor), one end of layer B to GND, and the other end of layer B to D4 for cable-break detection. The fourth wire is unused.
+- **Two pairs at 0 Ω empty, cross pairs open empty and low when pressed:** the looped pad above. Wire one end of layer A to D3 and the other end of layer B to D4, each through a 1 kΩ resistor, and one end of layer B to GND. D4 is the cable-break check. The fourth wire is unused.
 - **Only two wires, open empty and low when pressed:** a plain switch pad. Wire one to D3 (through the resistor) and the other to GND. Then connect **D4 directly to GND** with a short wire, or the cable check will report a problem forever. Cable-break detection is not available with this pad.
 - **A cross pair is low when empty and opens when pressed:** a normally closed pad. It will work, but in the generated ESPHome file change `inverted: true` to `inverted: false` under the `Pad Raw` pin.
 - **Pressed reading above about 10 kΩ:** the pad is too resistive for the board's internal pull-up to read reliably. It needs a different design (an analog threshold), which this project does not cover yet.
